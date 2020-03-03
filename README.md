@@ -44,6 +44,10 @@ To run the tests you can simply run:
 
 `go test ./...` 
 
+### Linting
+This project uses [golangci-lint][golangci-lint] in order to lint the project
+it is configured by the `.golangci.yml` file.
+
 ### Architecture
 cronparse has a couple of stages when it comes to parsing interpreting the
 expression, these stages are:
@@ -68,4 +72,5 @@ that they represent.
 [fsm]: https://en.wikipedia.org/wiki/Finite-state_machine
 [rob-pike-talk]: https://www.youtube.com/watch?v=HxaD_trXwRE
 [blog-post]: https://hackernoon.com/lexical-analysis-861b8bfe4cb0
+[golangci-lint]: github.com/golangci/golangci-lint
 

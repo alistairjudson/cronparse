@@ -1,0 +1,23 @@
+version: "2.1"
+
+jobs:
+  lint:
+    docker:
+      - image: golangci/golangci-lint:latest
+    steps:
+      - checkout
+      - run: golangci-lint run ./...
+
+  test:
+    docker:
+      - image:  golang:1.14
+    steps:
+      - checkout
+      - run: go test -race
+
+workflows:
+  version: 2
+  test:
+    jobs:
+      - lint
+      - test
