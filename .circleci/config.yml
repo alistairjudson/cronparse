@@ -13,7 +13,8 @@ jobs:
       - image:  golang:1.14
     steps:
       - checkout
-      - run: go test -race
+      - run: go test -race -coverprofile=coverage.txt -covermode=atomic $(go list ./... | grep -v /vendor/ )
+      - run: bash <(curl -s https://codecov.io/bash)
 
 workflows:
   version: 2
