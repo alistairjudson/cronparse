@@ -13,7 +13,7 @@ type Numberer interface {
 	Numbers() []int
 }
 
-// Provider is a type that represents a type that can give you numbers for
+// NumbererProvider is a type that represents a type that can give you numbers for
 // a numberer
 type NumbererProvider interface {
 	Numberer(parts Part) (Numberer, error)

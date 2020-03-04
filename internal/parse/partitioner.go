@@ -3,7 +3,7 @@ package parse
 import "errors"
 
 // Part is a group of tokens, that represent a single item, within a field of a
-// cronparse expression, e.g. (0-30/5) within an a field like "0-30/5,40,50"
+// cron expression, e.g. (0-30/5) within an a field like "0-30/5,40,50"
 type Part []Token
 
 // Types returns you the types of all of the statement types contained within a pary
@@ -15,7 +15,7 @@ func (p Part) Types() Types {
 	return types
 }
 
-// Partitioner is a type that can parse a field of a cronparse statement into it's
+// NewPartitioner is a type that can parse a field of a cron statement into it's
 // constituent parts
 func NewPartitioner() Partitioner {
 	return Partitioner{
@@ -24,7 +24,7 @@ func NewPartitioner() Partitioner {
 }
 
 // PartsProvider is an interface that represents a type that can parse a field of
-// a cronparse expression into it's constituent parts
+// a cron expression into it's constituent parts
 type PartsProvider interface {
 	Parts(input string) ([]Part, error)
 }

@@ -16,7 +16,7 @@ var typeMap = map[TokenType]string{
 }
 
 // TokenType is a type that represents the type of a value within
-// the field of a cronparse statement
+// the field of a cron statement
 type TokenType int
 
 // String implements fmt.Stringer returning a string representation of
@@ -49,6 +49,7 @@ func (t Types) Contains(search TokenType) bool {
 	return false
 }
 
+// Types of tokens in a cron expression
 const (
 	TokenTypeError TokenType = iota
 	TokenTypeAny
