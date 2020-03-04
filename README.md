@@ -36,16 +36,22 @@ you can find how to do that for your specific system [here][installing-go].
 Once you have installed Go, you can get up and running by cloning this
 repository to a location of your choice and running:
 
-`go run cmd/cronparse/main.go */15 0 1,15 * 1-5 /usr/bin/find`
+```console
+go run cmd/cronparse/main.go */15 0 1,15 * 1-5 /usr/bin/find
+```
 
 Alternatively if you have your `$GOPATH/bin` added to your `$PATH` you can run:
 
-`go get -u github.com/alistairjudson/cronparse/cmd/cronparse`
+```console
+go get -u github.com/alistairjudson/cronparse/cmd/cronparse
+```
 
 #### Tests
 To run the tests you can simply run:
 
-`go test ./...` 
+```console
+go test ./...
+``` 
 
 ### Linting
 This project uses [golangci-lint][golangci-lint] in order to lint the project
