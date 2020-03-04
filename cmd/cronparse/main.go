@@ -25,7 +25,7 @@ func main() {
 			for _, part := range parsed {
 				fmt.Println(part)
 			}
-			fmt.Printf("%-14s %s", "command", args[5])
+			fmt.Printf("%-14s %s\n", "command", args[5])
 		},
 	}
 	if err := cmd.Execute(); err != nil {
