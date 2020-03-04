@@ -3,9 +3,9 @@ package parse
 import "unicode"
 
 // This files represents the all of the states that there can possibly be
-// within a field of a cronparse expression. This is a state machine, it does not
-// validate the values of the items, only that the syntax of the cronparse statement
-// field matches the grammar of a cronparse field.
+// within a field of a cron expression. This is a state machine, it does not
+// validate the values of the items, only that the syntax of the cron statement
+// field matches the grammar of a cron field.
 
 func lexField(t *Tokeniser) StateFunc {
 	curr := t.Next()

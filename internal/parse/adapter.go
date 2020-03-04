@@ -7,19 +7,19 @@ import (
 )
 
 var (
-	// MinuteParser is a parser to parse the minute component of a cronparse expression
+	// MinuteParser is a parser to parse the minute component of a cron expression
 	MinuteParser = NewParser(numberer.MinuteFactory)
 
-	// HourParser is a parser to parse the hour component of a cronparse expression
+	// HourParser is a parser to parse the hour component of a cron expression
 	HourParser = NewParser(numberer.HourFactory)
 
-	// DayOfMonthParser is a parser to parse the day of month component of a cronparse expression
+	// DayOfMonthParser is a parser to parse the day of month component of a cron expression
 	DayOfMonthParser = NewParser(numberer.DayOfMonthFactory)
 
-	// MonthParser is a parser to parse the month component of a cronparse expression
+	// MonthParser is a parser to parse the month component of a cron expression
 	MonthParser = NewParser(numberer.MonthFactory)
 
-	// DayOfWeekParser is a parser to parse the day of week component of a cronparse expression
+	// DayOfWeekParser is a parser to parse the day of week component of a cron expression
 	DayOfWeekParser = NewParser(numberer.DayOfWeekFactory)
 )
 
@@ -33,7 +33,7 @@ func NewParser(provider numberer.Provider) Parser {
 }
 
 // Parser is the interface that represents a type that can parse numberer
-// of a cronparse statement into a Numberer
+// of a cron statement into a Numberer
 type Parser interface {
 	Parse(input string) (Numberer, error)
 }

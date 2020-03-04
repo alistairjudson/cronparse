@@ -1,6 +1,9 @@
 cronparse
 =========
-
+[![CircleCI](https://circleci.com/gh/alistairjudson/cronparse.svg?style=svg)](https://circleci.com/gh/alistairjudson/cronparse)
+[![codecov](https://codecov.io/gh/alistairjudson/cronparse/branch/master/graph/badge.svg)](https://codecov.io/gh/alistairjudson/cronparse)
+[![Go Report Card](https://goreportcard.com/badge/github.com/alistairjudson/cronparse)](https://goreportcard.com/report/github.com/alistairjudson/cronparse)
+[![Godoc](https://godoc.org/github.com/alistairjudson/cronparse?status.svg)](https://godoc.org/github.com/alistairjudson/cronparse)
 
 cronparse is a tool that can parse and expand cron expressions into the times
 that said expression will run at.
