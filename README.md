@@ -23,6 +23,7 @@ command        /usr/bin/find
 
 - [Building](#building)
   - [Tests](#tests)
+  - [Linting](#linting)
 - [Architecture](#architecture)
   - [Lexical Analysis](#lexical-analysis)
   - [Parsing](#parsing)
@@ -53,7 +54,7 @@ To run the tests you can simply run:
 go test ./...
 ``` 
 
-### Linting
+#### Linting
 This project uses [golangci-lint][golangci-lint] in order to lint the project
 it is configured by the `.golangci.yml` file.
 
@@ -65,8 +66,7 @@ expression, these stages are:
 cronparse uses a [finite state machine][fsm] to tokenise the individual
 components of the input into tokens, the way that this is implemented is heavily
 inspired by the approach taken by Rob Pike in this [talk][rob-pike-talk]. If you
-want to find out more about how this, this [blog post][blog-post] is pretty
-cool.
+want to find out more about this, this [blog post][blog-post] is pretty cool.
 
 In the tokenisation stage, the values themselves are not validated, only that
 the syntax of the expression matches that of a component of a cron expression.
@@ -81,5 +81,5 @@ that they represent.
 [fsm]: https://en.wikipedia.org/wiki/Finite-state_machine
 [rob-pike-talk]: https://www.youtube.com/watch?v=HxaD_trXwRE
 [blog-post]: https://hackernoon.com/lexical-analysis-861b8bfe4cb0
-[golangci-lint]: github.com/golangci/golangci-lint
+[golangci-lint]: https://github.com/golangci/golangci-lint
 
